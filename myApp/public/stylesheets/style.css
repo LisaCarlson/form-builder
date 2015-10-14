@@ -1,0 +1,57 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav.navbar.navbar-inverse {
+  background-color: #039099;
+}
+.container {
+  position: relative;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: #039099;
+}
+
+label, button {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
