@@ -9,14 +9,140 @@ block content
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='#') Form Builder
+        a.navbar-brand(href='#')
+          img(id='brand' src='/images/formicon.png')
       ul.nav.navbar-nav.navbar-right
         li
           h4.navbar-text 
-            i(class='glyphicon glyphicon-user')  #{username}
+            i(class='glyphicon glyphicon-user')  
+              span.user #{username}
         li
           a(href='/signout') Sign Out
-  .container
+  .wrapper
     .page-header
-      h1 Dashboard
-    h3 You are logged in now. Rock on!
+      h1 Build a Form
+    .row
+      .col-md-6.col
+        #form-preview
+        button#preview.btn.btn-info Preview Form
+      .col-md-6
+        ul.nav.nav-tabs
+          li.active.comp(role='presentation')
+            a(href='/dashboard') Components
+          li.comp-options(role='presentation')
+            a(href='/dashboard/comp-options') Component Options
+          li(role='presentation')
+            a(href='#') Form Options
+        h3 Form Components
+        h4 inputs
+        .input-group.draggable.ui-widget-content(data-type='text')
+          label Text
+          input.form-control(type='text', placeholder='Text Input', aria-describedby='basic-addon1')
+        .input-group.draggable.ui-widget-content(data-type='email')
+          label Email
+          input.form-control(type='email', placeholder='Email Input', aria-describedby='basic-addon1')
+        .input-group.draggable.ui-widget-content(data-type='password')
+          label Password
+          input.form-control(type='password', placeholder='Password Input', aria-describedby='basic-addon1')
+        .input-group.draggable.ui-widget-content(data-type='money') 
+          span.input-group-addon $
+          input.form-control(type='text', placeholder='Money Input' aria-label='Amount (to the nearest dollar)')
+          span.input-group-addon .00
+        h4 dropdowns
+        .bs-example
+          .btn-group
+            button.btn.btn-default.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Default 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+          .btn-group
+            button.btn.btn-primary.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Primary 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+          .btn-group
+            button.btn.btn-success.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Success 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+          .btn-group
+            button.btn.btn-info.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Info 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+          .btn-group
+            button.btn.btn-warning.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Warning 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+          .btn-group
+            button.btn.btn-danger.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Danger 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+        h4 checkboxes
+        .input-group.draggable.ui-widget-content
+          span.input-group-addon
+            input(type='checkbox', aria-label='...')
+          input.form-control(type='text', aria-label='...')
+        h4 radio buttons
+        .input-group.draggable.ui-widget-content
+          span.input-group-addon
+            input(type='radio', aria-label='...')
+          input.form-control(type='text', aria-label='...')
+        
+

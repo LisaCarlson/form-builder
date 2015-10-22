@@ -14,6 +14,10 @@ router.get('/dashboard', function(req, res, next) {
   res.render('dashboard', { username: req.session.username });
 });
 
+router.get('/dashboard/comp-options', function(req, res, next) {
+  res.render('comp-options', { username: req.session.username });
+});
+
 router.get('/signout', function(req, res, next) {
   req.session.username = null;
   res.redirect('/');
