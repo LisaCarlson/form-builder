@@ -26,123 +26,65 @@ block content
         #form-preview
         button#preview.btn.btn-info Preview Form
       .col-md-6
-        ul.nav.nav-tabs
-          li.active.comp(role='presentation')
-            a(href='/dashboard') Components
-          li.comp-options(role='presentation')
-            a(href='/dashboard/comp-options') Component Options
+        ul.nav.nav-tabs(role='tablist')
+          li.active(role='presentation')
+            a(href='#components', aria-controls='components', role='tab', data-toggle='tab') Components
           li(role='presentation')
-            a(href='#') Form Options
-        h3 Form Components
-        h4 inputs
-        .input-group.draggable.ui-widget-content(data-type='text')
-          label Text
-          input.form-control(type='text', placeholder='Text Input', aria-describedby='basic-addon1')
-        .input-group.draggable.ui-widget-content(data-type='email')
-          label Email
-          input.form-control(type='email', placeholder='Email Input', aria-describedby='basic-addon1')
-        .input-group.draggable.ui-widget-content(data-type='password')
-          label Password
-          input.form-control(type='password', placeholder='Password Input', aria-describedby='basic-addon1')
-        .input-group.draggable.ui-widget-content(data-type='money') 
-          span.input-group-addon $
-          input.form-control(type='text', placeholder='Money Input' aria-label='Amount (to the nearest dollar)')
-          span.input-group-addon .00
-        h4 dropdowns
-        .bs-example
-          .btn-group
-            button.btn.btn-default.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Default 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-          .btn-group
-            button.btn.btn-primary.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Primary 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-          .btn-group
-            button.btn.btn-success.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Success 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-          .btn-group
-            button.btn.btn-info.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Info 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-          .btn-group
-            button.btn.btn-warning.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Warning 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-          .btn-group
-            button.btn.btn-danger.dropdown-toggle.draggable.ui-widget-content(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Danger 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
-        h4 checkboxes
-        .input-group.draggable.ui-widget-content
-          span.input-group-addon
-            input(type='checkbox', aria-label='...')
-          input.form-control(type='text', aria-label='...')
-        h4 radio buttons
-        .input-group.draggable.ui-widget-content
-          span.input-group-addon
-            input(type='radio', aria-label='...')
-          input.form-control(type='text', aria-label='...')
-        
+            a(href='#options', aria-controls='options', role='tab', data-toggle='tab') Options
+          li(role='presentation')
+            a(href='#settings', aria-controls='settings', role='tab', data-toggle='tab') Settings
+        .tab-content
+          #components.tab-pane.active(role='tabpanel')
+            h3 Form Components
+
+            h4 inputs
+            .input-group.draggable.ui-widget-content(data-type='text')
+              label Text
+              input.form-control(type='text', placeholder='Text Input', aria-describedby='basic-addon1')
+            .input-group.draggable.ui-widget-content(data-type='email')
+              label Email
+              input.form-control(type='email', placeholder='Email Input', aria-describedby='basic-addon1')
+            .input-group.draggable.ui-widget-content(data-type='password')
+              label Password
+              input.form-control(type='password', placeholder='Password Input', aria-describedby='basic-addon1')
+            .input-group.draggable.ui-widget-content(data-type='money') 
+              span.input-group-addon $
+              input.form-control(type='text', placeholder='Money Input' aria-label='Amount (to the nearest dollar)')
+              span.input-group-addon .00
+            
+            h4 checkboxes
+            .input-group.draggable.ui-widget-content
+              span.input-group-addon
+                input(type='checkbox', aria-label='...')
+              input.form-control(type='text', aria-label='...')
+            h4 radio buttons
+            .input-group.draggable.ui-widget-content
+              span.input-group-addon
+                input(type='radio', aria-label='...')
+              input.form-control(type='text', aria-label='...')
+          #options.tab-pane(role='tabpanel')
+            h3 Component Options
+            form#options-form
+              p.help-block Text Input
+              .form-group
+                label(for='component-label') Label
+                input#component-label.form-control(type='text', placeholder='Label')
+              .form-group
+                label(for='component-name') Name
+                input#component-name.form-control(type='text', placeholder='Name')
+              .form-group
+                label(for='component-placeholder') Placeholder text
+                input#component-placeholder.form-control(type='text', placeholder='Placeholder text')
+              .form-group
+                label(for='component-default-value') Default value
+                input#component-default-value.form-control(type='text', placeholder='Default value')  
+              .checkbox
+                label
+                  input#component-required(type='checkbox')
+                  |  Required?
+              button#options-reset.btn.btn-default(type='reset') Clear    
+          #settings.tab-pane(role='tabpanel') 
+            h3 Settings
+            p Hellow
+
 

@@ -89,10 +89,6 @@ button.draggable {
   margin: 5px;
 }
 
-button[type='submit'] {
-  margin-top: 10px;
-}
-
 .navbar-text > i {
   color: #fff;
 }
@@ -107,6 +103,9 @@ button[type='submit'] {
   width: 40px;
 }
 
+.fb-buttons button{
+  margin-right:10px;
+}
 
 
 
